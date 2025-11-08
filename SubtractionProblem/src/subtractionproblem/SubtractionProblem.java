@@ -5,31 +5,30 @@ import java.util.Scanner;
 public class SubtractionProblem {
 
     public static void main(String[] args) {
-                Scanner input = new Scanner(System.in);
         
-        int number1 = (int)(Math.random() * 10);
-        int number2 = (int)(Math.random() * 10);
+        Scanner input = new Scanner(System.in);
+       
+        int number1 = (int) (Math.random() * 10);
+        int number2 = (int) (Math.random() * 10);
+       
+        if(number1 < number2){
+           int temp = number1;
+           number1 = number2;
+           number2 = temp;
+       }
+       
+        System.out.print("What is: " + number1 + " - " + number2 + " = ");
+        int answer = input.nextInt();
         
-        if(number1 > number2){
-            
-            int Answer = number1 - number2;
-            System.out.print("What is: " + number1 + " - " + number2 + " = ");
-            int sAnswer = input.nextInt();
-            
-            if (sAnswer== Answer){
-                System.out.println("Welldone!");
-            }
-            
-            else{
-                System.out.println("Wrong!");
-                System.out.println("The right answer is: " + Answer);
-            }
+        if(answer == number1 - number2){
+            System.out.println("Welldone!");
         }
         
         else{
-            System.out.println("Something went wrong!");
-            System.out.println("Try agian");
-        }  
+            System.out.println("You are wrong!");
+            System.out.println(number1 + " - " + number2 + " = " + (number1 - number2));
+        }
     }
     
 }
+
