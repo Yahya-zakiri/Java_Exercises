@@ -21,6 +21,7 @@ public class BMICalculation {
             //BMI calculating formula
             double bmi = weight /(Math.pow(height, 2));
         
+            System.out.println("Your BMI is: " + bmi);
             
             if (bmi < 18.5){
                 System.out.println("Based on your BMI you are underweight!");
@@ -45,3 +46,4 @@ public class BMICalculation {
     }
     
 }
+
